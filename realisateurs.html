@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realisateurs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    .nav-item {
+      font-size: larger;
+      font-weight: 200px;
+    }
+
+    .nav-item:hover {
+      background-color: rgb(76, 110, 89);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand col-3 mx-5" href="#">LACINEMATEK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse col-8" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-5">
+            <a class="nav-link " aria-current="page" href="login.html">Login</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="./admin.html">Register</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="./films.html">Films</a>
+          </li>
+          <li class="nav-item mx-5">
+            <a class="nav-link" href="realisateurs.html">Realisateurs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div id="header" class="mt-5">
+        <h1 class="text-center m-3">Realisateurs</h1>
+      </div>
+      <div class="col-4 mt-5">
+        <form class="justify-content-center">
+          <div class="mb-3">
+            <label for="exampleInputnom" class="form-label">FIRST NAME:</label>
+            <input type="email" class="form-control" id="nom" placeholder="saissisez le nom ici">
+            <div class="invalid-feedback"> le nom est obligatoire</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputprenom" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="prenom" placeholder="saissisez le prénom ici">
+            <div class="invalid-feedback"> le prenom est obligatoire</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputorigin" class="form-label">Origin:</label>
+            <input type="text" class="form-control" id="origine" placeholder="saissisez l'origin de realisateur ici">
+            <div class="invalid-feedback"> l'origin est obligatoire</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInpuliste" class="form-label">Ajouter un film:</label>
+            <input type="text" class="form-control" id="film" placeholder="saissisez un film pour ce realisateur">
+          </div>
+          <div class="mb-3">
+            <button type="button" id="save" class="btn btn-success">Save</button>
+            <button type="button" id="edit" class="btn btn-outline-success w-100 d-none">update</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-8 mt-5 justify-content-center">
+        <table class="table table-stripped table-light">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Origin</th>
+              <th>Films</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="realisateur.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
